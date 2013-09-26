@@ -1,21 +1,20 @@
-// define a function
-var fn = function () {
-    //...
-} 
-// then execute some code inside a closure
-(function () {
-//...
-})();
+//an example where 
+//a function
+function wtf() {
+    console.log("this function doesn't actually return anything")
+    console.log("So when you call it, it evaluates to undefined")
+}
 
-var fn = function () {
-//...
-}(function () {
-//...
-})();
-
+wtf()
+(function(){
+    // this pattern is known as an immediately invoking function definition
+    // it is mostly used to introduce local state
+    var foo = 1
+})()
 
 
-//another example where it messages up
+
+//an example where semi-colon insertion can lead to bad results 
 return
 {
     status: true

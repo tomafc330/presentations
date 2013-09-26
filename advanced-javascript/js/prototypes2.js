@@ -9,7 +9,7 @@ Vehicle.prototype = {
 }
 
 var Car = function Car() {};
-Car.prototype = new Vehicle("tan");
+Car.prototype = new Vehicle("tan"); //important
 Car.prototype.honk = function honk() { return "BEEP!" };
 
 var car = new Car();

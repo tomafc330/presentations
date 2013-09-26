@@ -13,9 +13,6 @@ go();
 l; // throws a reference error
 
 
-
-
-
 //example 3
 var aNumber = 100;
 tweak();
