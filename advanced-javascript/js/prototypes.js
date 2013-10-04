@@ -9,6 +9,8 @@ Ninja.prototype.swingSword = function(){
 };
 var ninja = new Ninja();
 
+ninja.constructor; // == the constructor we defined
+
 ninja.swingSword();
 
 

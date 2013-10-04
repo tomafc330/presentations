@@ -7,12 +7,21 @@ function juggle() {
 } 
 
 juggle(1,2);
-result === 3;
+result === 3; //notice 
 
-var ninja1 = {};
-var ninja2 = {};
-juggle.apply(ninja1,[1,2,3,4]);
-juggle.call(ninja2,5,6,7,8);
 
-ninja1.result === 10;
-ninja2.result === 26;
+
+
+
+var clown = {};
+juggle.apply(clown,[1,2,3,4]);
+clown.result
+
+
+
+var krusty = {};
+
+
+juggle.call(krusty,5,6,7,8);
+
+krusty.result === 26; 

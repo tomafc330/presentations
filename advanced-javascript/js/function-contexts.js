@@ -1,51 +1,33 @@
+//Example #1
 function greet() {
     this.hi = 'hello';
 }
 
 greet();
 
-hi;
+hi; // == 'hello', note hi is on the global context
 
 
-//another example of the this context
+//Example #2 -this context in an object.
 var obj = {
     greet: greet
 }
 
 obj.greet();
 
-obj.hi;
+obj.hi; // == 'hello'; note hi is on the object
 
 
-//yet another example of the this context
-function Greeter() {}
-
-Greeter.prototype.greet = function() {
-    this.foo = 'bar';
+//Example 3: this context within a constructor
+function Greeter() {
+    this.greet = function() {
+        this.foo = 'bar';
+    }
 }
 
 var greeter = new Greeter();
 greeter.greet();
 
-greeter.foo
+greeter.foo // == 'bar'
 
 
-
-
-<button id="test">Click Me!</button>
-<script>
-var button = {
-    clicked: false,
-    click: function(){
-        this.clicked = true;
-    }
-};
-var elem = document.getElementById("test");
-elem.addEventListener("click", button.click, false);
-</script>
-
-
-
-
-//instead
-elem.addEventListener("click",button.click.apply(button,"click"),false);

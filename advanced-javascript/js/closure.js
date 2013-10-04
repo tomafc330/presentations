@@ -3,12 +3,13 @@ function Ninja() {
     this.getSlices = function(){ 
         return slices; 
     }; 
+    this.addSlice = function(){
+         slices++;
+    };
 }
-this.slice = function(){
-    slices++;
-};
+
 var ninja = new Ninja();
-ninja.slice();
+ninja.addSlice();
 
 ninja.getSlices() == 1;
 ninja.slices === undefined;
