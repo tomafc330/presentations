@@ -8,5 +8,5 @@ user.name
 name
 
 
-user = new User("Ichigo", "Kurosaki");
-user.name
+var user2 = new User("Matt", "Desharlais");
+user2.name

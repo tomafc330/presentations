@@ -1,28 +1,29 @@
-//created via literals
-function isNimble() { return true; } //exist in the global context
+function a() { return true; } //exist in the global context
 
-typeof isNimble === 'function'; 
-isNimble.name === 'isNimble';
+typeof a === 'function'; 
+a.name === 'isNimble';
+
+a();
 
 //assigned to variables
-var canFly = function(){ return true; }; //can be assigned to a variable
+var b = function(){ return true; }; //can be assigned to a variable
 
-canFly === 'function';
-canFly.name === ''; //anonymous
+typeof b === 'function';
+b.name === ''; //anonymous
 
 //passed as arguments to functions
-function callOther(func) {
+function c(func) {
     func();
 }
 
-callOther(function() {console.log('muahaha')});
+c(function() {console.log('muahaha')});
 
 //returned as values from functions
-function returnFunc() {
-    return callOther;
+function d() {
+    return c;
 }
 
-returnFunc()(function() { console.log('bwahahaha') });
+d()(function() { console.log('bwahahaha') });
 
 //contain functions within functions
 function outer(){ 
@@ -36,3 +37,5 @@ function outer(){
 typeof outer === 'function';
 
 inner === undefined;
+
+

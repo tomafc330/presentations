@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+
+<body>
+<div>div1</div>
+<div>div2</div>
+<div>div3</div>
+
+<script>
+	//common pitfall
+	var div = document.getElementsByTagName("div");
+	for (var i = 0; i < div.length; i++) {
+		div[i].addEventListener("click", function () {
+			alert("div #" + i + " was clicked.");
+		}, false);
+    }
+
+
+	//solution with IIFE
+//	var div = document.getElementsByTagName("div");
+//	for (var i = 0; i < div.length; i++) (function (i) {
+//		div[i].addEventListener("click", function () {
+//			alert("div #" + i + " was clicked.");
+//		}, false);
+//	})(i);
+</script>
+</body>
+</html>

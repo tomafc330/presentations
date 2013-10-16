@@ -1,3 +1,4 @@
+//example 1
 if (true) {
     var x = 713;
 };
@@ -15,11 +16,12 @@ l; // throws a reference error
 
 //example 3
 var aNumber = 100;
-tweak();
 
 function tweak() {
-    document.write(aNumber);
-    if (false) {
+    console.log('output is: ' + aNumber);
+    if (true) {
         var aNumber = 123;  
     }
 }
+
+tweak();
