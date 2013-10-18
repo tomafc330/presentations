@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>checked demo</title>
+	<style>
+		div {
+			color: red;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+
+<script>
+	(function($) {
+		$.say = function (what) {
+			alert('I say ' + what);
+		};
+	})(jQuery);
+
+	jQuery.say('muahahaha');
+</script>
+
+</body>
+</html>

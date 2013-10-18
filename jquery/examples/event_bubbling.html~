@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>checked demo</title>
+  <style>
+  div {
+    color: red;
+  }
+  </style>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+ 
+<ul id="theList">
+<li>One</li>
+<li>Two</li>
+<li>Three</li>
+<li>Four</li>
+</ul>
+ 
+
+<div id="result1">
+</div>
+
+<div id="result2">
+</div>
+<script>
+var text = $('#theList').text();
+$('#result1').append('The text() method returns: ' + text);
+
+var html = $('#theList').html();
+$('#result2').append('The html() method returns: ' + html);
+</script>
+ 
+</body>
+</html>

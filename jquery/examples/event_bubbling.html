@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html id="greatgreatgrandpa">
+<head>
+	<title>Bubbling Example</title>
+
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script type="text/javascript">
+
+		$(function () {
+			$('*').each(function () {
+				var self = this;
+				$(self).on('click', function (event) {
+					var target = (event.target) ? event.target : event.srcElement;
+					console.log('For ' + self.tagName + '#' + self.id + ' target is ' + target.tagName + '#' + target.id);
+				});
+			});
+		});
+	</script>
+</head>
+<body id="greatgrandpa">
+<div id="grandpa">
+	<div id="pops">
+		<button id="button">Click me!</button>
+	</div>
+</div>
+</body>
+</html>
+

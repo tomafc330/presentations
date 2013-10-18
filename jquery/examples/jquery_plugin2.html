@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>checked demo</title>
+	<style>
+		div {
+			color: red;
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+
+<ul id="theList">
+	<li>One</li>
+	<li>Two</li>
+	<li>Three</li>
+	<li>Four</li>
+</ul>
+
+<script>
+	(function($){
+		//the fn alias for an internal prototype property of an object that jQuery uses to create its wrapper objects.
+		$.fn.makeItBlue = function() {
+			//this refers to the wrapped set
+			return this.css('color', 'blue');
+		};
+	})(jQuery);
+
+
+	jQuery('#theList li').makeItBlue();
+</script>
+
+</body>
+</html>
