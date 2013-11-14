@@ -1,12 +1,8 @@
 function User(first, last){
       this.name = first + " " + last;
 }
-var name = "Rukia";
-var user = User("Ichigo", "Kurosaki"); 
+var user = User("Ichigo", "Kurosaki");
+user.name === undefined;
 
-user.name
-name
-
-
-var user2 = new User("Matt", "Desharlais");
-user2.name
+var user2 = new User("Matt", "Deharlais");
+user2.name === "Matt Deharlais";

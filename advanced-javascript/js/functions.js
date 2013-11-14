@@ -1,41 +1,42 @@
-function a() { return true; } //exist in the global context
-
-typeof a === 'function'; 
-a.name === 'isNimble';
-
+function a() {
+	return true;
+} //created as a function statement in the global context
+typeof a === 'function';
 a();
 
-//assigned to variables
-var b = function(){ return true; }; //can be assigned to a variable
-
+//created as literals and assigned to variables
+var b = function () {
+	return true;
+}; //can be assigned to a variable
 typeof b === 'function';
 b.name === ''; //anonymous
 
 //passed as arguments to functions
 function c(func) {
-    func();
+	func();
 }
 
-c(function() {console.log('muahaha')});
+c(function () {
+	console.log('muahaha')
+});
 
 //returned as values from functions
 function d() {
-    return c;
+	return c;
 }
 
-d()(function() { console.log('bwahahaha') });
+d()(function () {
+	console.log('bwahahaha')
+});
 
 //contain functions within functions
-function outer(){ 
-    typeof inner === 'function';
-
-    function inner(){};
-
-    typeof inner === 'function';
+function outer() {
+	function inner() {
+	};
+	typeof inner === 'function';
 }
 
 typeof outer === 'function';
-
 inner === undefined;
 
 

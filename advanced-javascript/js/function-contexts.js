@@ -4,8 +4,7 @@ function greet() {
 }
 
 greet();
-
-hi; // == 'hello', note hi is on the global context
+hi === 'hello' //hi is on the global context
 
 
 //Example #2 -this context in an object.
@@ -15,7 +14,7 @@ var obj = {
 
 obj.greet();
 
-obj.hi; // == 'hello'; note hi is on the object
+obj.hi === 'hello'; //hi is on the object
 
 
 //Example 3: this context within a constructor

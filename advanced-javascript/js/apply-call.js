@@ -10,18 +10,11 @@ juggle(1,2);
 result === 3; //notice 
 
 
-
-
-
 var clown = {};
 juggle.apply(clown,[1,2,3,4]);
 clown.result
 
 
-
 var krusty = {};
-
-
 juggle.call(krusty,5,6,7,8);
-
-krusty.result === 26; 
+krusty.result === 26;
