@@ -7,6 +7,7 @@
 			clicked: false,
 			click: function () {
 				this.clicked = true;
+				alert("Context of 'this' is: " + this);
 			}
 		};
 		var elem = document.getElementById("test");

@@ -1,20 +1,23 @@
 function Vehicle(color) {
-    this.color = color;
+	this.color = color;
 }
 
 // Instance methods
 Vehicle.prototype = {
-    go: function() {
-        return this.color + " vehicle goes Vroom!";
-    }
+	go: function () {
+		return this.color + " vehicle goes Vroom!";
+	}
 }
 
 var vehicle = new Vehicle('Blue');
 vehicle.go();
 
-function Car() {};
+function Car() {
+};
 Car.prototype = new Vehicle("Tan"); //important
-Car.prototype.honk = function honk() { return "BEEP!" };
+Car.prototype.honk = function honk() {
+	return "BEEP!"
+};
 
 var car = new Car();
 car.honk();             // "BEEP!"

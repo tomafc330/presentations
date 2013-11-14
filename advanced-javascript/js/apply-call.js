@@ -12,7 +12,7 @@ result === 3; //notice
 
 var clown = {};
 juggle.apply(clown,[1,2,3,4]);
-clown.result
+clown.result === 10;
 
 
 var krusty = {};
